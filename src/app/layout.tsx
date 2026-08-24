@@ -51,9 +51,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${fraunces.variable} ${inter.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#0B0F19] text-[#F5F1E8] font-sans selection:bg-[#7A1F2B] selection:text-[#F5F1E8]">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-[#0B0F19] text-[#F5F1E8] font-sans selection:bg-[#7A1F2B] selection:text-[#F5F1E8]"
+      >
         {children}
       </body>
     </html>

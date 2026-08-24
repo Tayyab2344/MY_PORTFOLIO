@@ -8,6 +8,17 @@ import * as THREE from "three";
 import { generateLandDotCoordinates } from "./landData";
 import { AtmosphereShader } from "./AtmosphereShader";
 
+// Filter 3rd-party Three.js internal Clock deprecation warning emitted by R3F canvas loop
+if (typeof window !== "undefined") {
+  const originalWarn = console.warn;
+  console.warn = (...args: unknown[]) => {
+    if (typeof args[0] === "string" && args[0].includes("THREE.Clock: This module has been deprecated")) {
+      return;
+    }
+    originalWarn(...args);
+  };
+}
+
 export function latLngToVector3(lat: number, lng: number, radius: number): THREE.Vector3 {
   const phi = (90 - lat) * (Math.PI / 180);
   const theta = (lng + 180) * (Math.PI / 180);
