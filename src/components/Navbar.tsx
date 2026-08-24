@@ -9,8 +9,14 @@ interface NavItem {
   href: string;
 }
 
-const NAV_ITEMS: NavItem[] = [
-  { label: "WORK", href: "#work" },
+const DESKTOP_NAV_ITEMS: NavItem[] = [
+  { label: "PROJECTS", href: "#work" },
+  { label: "ABOUT", href: "#about" },
+  { label: "TECH STACK", href: "#tech" },
+];
+
+const MOBILE_NAV_ITEMS: NavItem[] = [
+  { label: "PROJECTS", href: "#work" },
   { label: "ABOUT", href: "#about" },
   { label: "TECH STACK", href: "#tech" },
   { label: "CONTACT", href: "#contact" },
@@ -83,7 +89,7 @@ export default function Navbar() {
         {/* Right Section: Desktop Navigation Links & Outlined CTA */}
         <div className="hidden md:flex items-center space-x-8">
           <nav className="flex items-center space-x-6" aria-label="Main Navigation">
-            {NAV_ITEMS.map((item, idx) => (
+            {DESKTOP_NAV_ITEMS.map((item, idx) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -161,14 +167,21 @@ export default function Navbar() {
               </span>
             </div>
 
-            {NAV_ITEMS.map((item) => (
+            {MOBILE_NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 font-mono text-xs sm:text-sm tracking-widest text-[#8B92A8] hover:text-[#F5F1E8] hover:pl-2 border-l border-transparent hover:border-[#9C2B3A] transition-all duration-200 uppercase"
+                className={`py-2 font-mono text-xs sm:text-sm tracking-widest uppercase flex items-center justify-between transition-all duration-200 ${
+                  item.label === "CONTACT"
+                    ? "text-[#F5F1E8] bg-[#7A1F2B]/20 border border-[#9C2B3A] px-3 my-1"
+                    : "text-[#8B92A8] hover:text-[#F5F1E8] hover:pl-2 border-l border-transparent hover:border-[#9C2B3A]"
+                }`}
               >
-                {item.label}
+                <span>{item.label}</span>
+                {item.label === "CONTACT" && (
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#9C2B3A]" />
+                )}
               </a>
             ))}
 

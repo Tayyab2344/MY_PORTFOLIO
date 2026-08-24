@@ -3,7 +3,7 @@
 :root {
   --bg: #0B0F19;              /* near-black navy base */
   --text: #F5F1E8;             /* warm cream, not pure white */
-  --text-muted: #8B92A8;       /* secondary/meta text, nav labels */
+  --text-muted: #B0B7CB;       /* high-contrast secondary/meta text */
   --accent: #7A1F2B;           /* deep burgundy/wine — large surfaces: buttons, 3D object */
   --accent-bright: #9C2B3A;    /* lifted burgundy — thin elements: underlines, links, hover states */
   --border: #1C2333;           /* barely-there dividers */

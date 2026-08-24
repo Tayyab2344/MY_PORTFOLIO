@@ -178,7 +178,7 @@ export default function Hero() {
             {/* 3. Systems Subhead Copy */}
             <motion.p
               variants={subheadVariants}
-              className="font-sans text-xs sm:text-sm md:text-base text-[#8B92A8] leading-relaxed max-w-[54ch] my-3 font-normal"
+              className="font-sans text-xs sm:text-sm md:text-base text-[#C5CBE0] leading-relaxed max-w-[54ch] my-3 font-normal"
             >
               I architect resilient systems, scalable platforms, and intelligent solutions that solve real problems.
               From low-level code to distributed systems — I build with intent and ship with impact.
@@ -194,28 +194,28 @@ export default function Hero() {
                 <span className="text-[10px] sm:text-xs font-mono font-semibold text-[#F5F1E8]/90 uppercase tracking-wider group-hover:text-[#9C2B3A] transition-colors mt-0.5">
                   YEARS
                 </span>
-                <span className="text-[10px] sm:text-xs font-sans text-[#8B92A8]/80 mt-0.5">Building systems</span>
+                <span className="text-[10px] sm:text-xs font-sans text-[#B0B7CB] mt-0.5">Building systems</span>
               </div>
               <div className="flex flex-col group p-1 sm:p-1.5 transition-colors hover:bg-[#1C2333]/30">
                 <span className="text-lg sm:text-2xl font-mono font-bold text-[#F5F1E8]">20+</span>
                 <span className="text-[10px] sm:text-xs font-mono font-semibold text-[#F5F1E8]/90 uppercase tracking-wider group-hover:text-[#9C2B3A] transition-colors mt-0.5">
                   PROJECTS
                 </span>
-                <span className="text-[10px] sm:text-xs font-sans text-[#8B92A8]/80 mt-0.5">Shipped &amp; delivered</span>
+                <span className="text-[10px] sm:text-xs font-sans text-[#B0B7CB] mt-0.5">Shipped &amp; delivered</span>
               </div>
               <div className="flex flex-col group p-1 sm:p-1.5 transition-colors hover:bg-[#1C2333]/30">
                 <span className="text-lg sm:text-2xl font-mono font-bold text-[#F5F1E8]">10+</span>
                 <span className="text-[10px] sm:text-xs font-mono font-semibold text-[#F5F1E8]/90 uppercase tracking-wider group-hover:text-[#9C2B3A] transition-colors mt-0.5">
                   TECHNOLOGIES
                 </span>
-                <span className="text-[10px] sm:text-xs font-sans text-[#8B92A8]/80 mt-0.5">Across the stack</span>
+                <span className="text-[10px] sm:text-xs font-sans text-[#B0B7CB] mt-0.5">Across the stack</span>
               </div>
               <div className="flex flex-col group p-1 sm:p-1.5 transition-colors hover:bg-[#1C2333]/30">
                 <span className="text-lg sm:text-2xl font-mono font-bold text-[#F5F1E8]">∞</span>
                 <span className="text-[10px] sm:text-xs font-mono font-semibold text-[#F5F1E8]/90 uppercase tracking-wider group-hover:text-[#9C2B3A] transition-colors mt-0.5">
                   CURIOSITY
                 </span>
-                <span className="text-[10px] sm:text-xs font-sans text-[#8B92A8]/80 mt-0.5">Always learning</span>
+                <span className="text-[10px] sm:text-xs font-sans text-[#B0B7CB] mt-0.5">Always learning</span>
               </div>
             </motion.div>
 
@@ -238,9 +238,9 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group inline-flex items-center justify-center px-4 py-2.5 text-xs font-mono tracking-widest text-[#8B92A8] hover:text-[#F5F1E8] uppercase border border-[#1C2333] hover:border-[#8B92A8]/40 bg-[#0B0F19] transition-all duration-200 focus:outline-none w-full min-[420px]:w-auto"
+                className="group inline-flex items-center justify-center px-4 py-2.5 text-xs font-mono tracking-widest text-[#C5CBE0] hover:text-[#F5F1E8] uppercase border border-[#1C2333] hover:border-[#8B92A8]/40 bg-[#0B0F19] transition-all duration-200 focus:outline-none w-full min-[420px]:w-auto"
               >
-                <FileText className="mr-2 w-3.5 h-3.5 text-[#8B92A8] group-hover:text-[#F5F1E8] transition-colors" />
+                <FileText className="mr-2 w-3.5 h-3.5 text-[#C5CBE0] group-hover:text-[#F5F1E8] transition-colors" />
                 <span>RESUME / SPECS</span>
               </motion.a>
             </motion.div>
