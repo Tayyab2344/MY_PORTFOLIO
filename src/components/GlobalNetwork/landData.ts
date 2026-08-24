@@ -1,6 +1,3 @@
-// Compact bounding box definitions for major world landmasses
-// Used to procedurally generate a clean dot-matrix land pattern over Earth sphere
-
 interface LandRegion {
   name: string;
   minLat: number;
@@ -43,19 +40,14 @@ const LAND_REGIONS: LandRegion[] = [
   { name: "New Zealand", minLat: -47, maxLat: -34, minLng: 165, maxLng: 179 },
 ];
 
-/**
- * Generate regular grid of lat/lon points matching continental landmasses
- */
 export function generateLandDotCoordinates(latStep = 3.5, lngStep = 3.5): Array<[number, number]> {
   const dots: Array<[number, number]> = [];
 
   for (let lat = -80; lat <= 80; lat += latStep) {
-    // Adjust longitude step at higher latitudes to maintain uniform spatial dot density
     const cosLat = Math.cos((lat * Math.PI) / 180);
     const adjustedLngStep = cosLat > 0.15 ? lngStep / cosLat : lngStep * 4;
 
     for (let lng = -180; lng < 180; lng += adjustedLngStep) {
-      // Check if point falls within land region bounds
       const isLand = LAND_REGIONS.some((r) => lat >= r.minLat && lat <= r.maxLat && lng >= r.minLng && lng <= r.maxLng);
 
       if (isLand) {

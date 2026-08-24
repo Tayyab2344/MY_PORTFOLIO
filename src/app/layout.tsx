@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     siteName: "ranatayyab.dev",
     type: "website",
   },
+  icons: {
+    icon: "/globe.svg",
+  },
 };
 
 export default function RootLayout({

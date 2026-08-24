@@ -5,8 +5,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import * as THREE from "three";
-import { generateLandDotCoordinates } from "../VisitorGlobe/landData";
-import { AtmosphereShader } from "../VisitorGlobe/AtmosphereShader";
+import { generateLandDotCoordinates } from "./landData";
+import { AtmosphereShader } from "./AtmosphereShader";
 
 export function latLngToVector3(lat: number, lng: number, radius: number): THREE.Vector3 {
   const phi = (90 - lat) * (Math.PI / 180);
